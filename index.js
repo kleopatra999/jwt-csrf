@@ -536,8 +536,8 @@ module.exports = {
                 drop(req, res, options);
             });
 
-            // We only want to verify certain requests
-            if (req.method === 'GET' || req.method === 'HEAD' || excludeUrls.indexOf(req.originalUrl) !== -1) {
+            if (req.method === 'GET' || req.method === 'HEAD' ||
+                excludeUrls.indexOf((req.originalUrl || '').split(/[?#]/, 1)[0]) !== -1) {
                 return next();
             }
 
