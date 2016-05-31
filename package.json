@@ -43,9 +43,6 @@
   },
   "author": "vgorthy@paypal.com",
   "license": "PayPal",
-  "publishConfig": {
-    "registry": "http://npm.paypal.com"
-  },
   "pre-commit": [
     "lint"
   ]
